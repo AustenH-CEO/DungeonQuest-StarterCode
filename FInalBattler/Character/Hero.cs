@@ -1,5 +1,6 @@
 ﻿using FinalBattler.Character.Upgrades;
 using FinalBattler.Interfaces;
+using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 
@@ -7,9 +8,6 @@ namespace FinalBattler.Character
 {
     public class Hero : Creations, IHero
     {
-        public int Health { get; set; }
-        public int Power { get; set; }
-        public int Luck { get; set; }
         public int Mana { get; set; }
         public int ExperienceRemaining { get; set; }
         public CombatClass CombatClass { get; set; }
@@ -20,12 +18,25 @@ namespace FinalBattler.Character
 
         public Hero()
         {
-            Name = "Unknown";
-            Level = 0;
+            Name = "Dude";
+            Level = 1;
             Health = 1;
             Power = 1;
             Luck = 1;
             Mana = 1;
+            MaxDamage = 4;
+            MinDamage = 1;
+        }
+        public Hero(string name, int level, int health, int power, int luck, int mana, int maxDamage, int minDamage)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.Health = health;
+            this.Power = power;
+            this.Luck = luck;
+            this.Mana = mana;
+            this.MaxDamage = maxDamage;
+            this.MinDamage = minDamage;
         }
         public void DisplayStats(bool showTotalStats = false)
         {
