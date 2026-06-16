@@ -5,7 +5,12 @@
         public string SpellName { get; set; }
         public int ManaCost { get; set; }
         public int BaseDamage { get; set; }
-
+        public Spell()
+        {
+                SpellName = "No Spells.";
+                ManaCost = 0;
+                BaseDamage = 0;
+        }
         public Spell(string name, int manaCost, int baseDamage)
         {
             SpellName = name;

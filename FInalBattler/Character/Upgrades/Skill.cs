@@ -6,6 +6,13 @@
         public int BaseDamage { get; set; }
         public int MaxCooldown { get; private set; }
         public int CurrentCooldown { get; private set; }
+        public Skill()
+        {
+            SkillName = "No Skills.";
+            BaseDamage = 0;
+            MaxCooldown = 0;
+            CurrentCooldown = 0;
+        }
 
         public Skill(string name, int baseDamage, int cooldown)
         {

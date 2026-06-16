@@ -8,6 +8,9 @@
 
         public Item()
         {
+            ItemName = "No Items.";
+            Description = "No Description.";
+            ItemPower = 0;
         }
 
         public Item(string name, string description)

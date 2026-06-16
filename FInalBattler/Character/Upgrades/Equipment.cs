@@ -9,6 +9,10 @@
 
         public Equipment()
         {
+            EquipmentName = string.Empty;
+            Slot = EquipmentSlot.none;
+            StatBoostType = StatBoostType.none;
+            BoostValue = 0;
         }
 
         public Equipment(string name, EquipmentSlot slot, StatBoostType statBoostType, int boostValue)
@@ -21,6 +25,7 @@
     }
     public enum EquipmentSlot
     {
+        none,
         Head,
         Chest,
         LeftArm,
@@ -32,6 +37,7 @@
 
     public enum StatBoostType
     {
+        none,
         Health,
         Power,
         Luck
