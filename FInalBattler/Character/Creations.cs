@@ -34,6 +34,17 @@ namespace FinalBattler.Character
             Console.WriteLine(Creature.Name + "'s Health: " + Creature.Health);
             Utility.Separate();
         }
+        public void ConsumeItem(Hero character, Item item)
+        {
+            if (item.ItemName == "Healing Potion")
+            {
+                character.Health += item.ItemPower;
+                character.Items.Remove(item);
+            }
+            if (character.Health >= character.TotalHealth)
+                character.Health = character.TotalHealth;
+            Console.WriteLine(character.Name + " healed for : " + item.ItemPower);
+        }
     }
 
     public enum CombatClass

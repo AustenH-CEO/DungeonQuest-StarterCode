@@ -18,5 +18,11 @@
             ItemName = name;
             Description = description;
         }
+        public Item(string name, string description, int itemPower)
+        {
+            ItemName = name;
+            Description = description;
+            ItemPower = itemPower;
+        }
     }
 }

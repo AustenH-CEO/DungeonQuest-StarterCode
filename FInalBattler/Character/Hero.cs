@@ -12,10 +12,10 @@ namespace FinalBattler.Character
         public int Mana { get; set; }
         public int ExperienceRemaining { get; set; }
         public CombatClass CombatClass { get; set; }
-        public List<Item> Items { get; set; }
-        public List<Skill> Skills { get; set; }
-        public List<Spell> Spells { get; set; }
-        public List<Equipment> Equipment { get; set; }
+        public List<Item> Items { get; set; } = new List<Item>();
+        public List<Skill> Skills { get; set; } = new List<Skill>();
+        public List<Spell> Spells { get; set; } = new List<Spell>();
+        public List<Equipment> Equipment { get; set; } = new List<Equipment>();
 
         public Hero()
         {
@@ -59,7 +59,7 @@ namespace FinalBattler.Character
                     Console.WriteLine("Items: ");
                     foreach (Item item in Items)
                     {
-                        Console.WriteLine(item.ToString());
+                        Console.WriteLine(item.ItemName.ToString());
                     }
                 }
                 if (Skills == null || Skills.Count == 0)
